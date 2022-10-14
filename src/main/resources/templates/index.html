@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+    <meta charset="UTF-8">
+    <title>api_pr5</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-offset-1 col-md-10">
+            <div class="panel">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col col-sm-3 col-xs-12">
+                            <h4 class="title">Список <span>Контактов</span></h4>
+                        </div>
+                        <div class="col-sm-9 col-xs-12 text-right">
+                            <div class="btn_group">
+                                <input type="text" id="search" class="form-control" placeholder="Поиск по id">
+                                <button id="searchButton" class="btn btn-default" title="Search"><i
+                                        class="fa fa-search"></i>
+                                </button>
+                                <button id="delete" class="btn btn-default" title="Delete"><i class="fa fa-trash"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body table-responsive">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Full Name</th>
+                            <th>Number</th>
+                            <th>Actions</th>
+                        </tr>
+                        </thead>
+                        <tbody id="table">
+                        <tr>
+                            <td>id</td>
+                            <td><input class="form-control" type="text" id="name" placeholder="Введите имя"
+                                       required></td>
+                            <td><input class="form-control" type="text" id="number" placeholder="Введите номер"
+                                       required></td>
+                            <td>
+                                <ul class="action-list">
+                                    <li id="create"><a href="#" data-tip="add"><i class="fa fa-plus"></i></a></li>
+                                </ul>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+<!--                <div class="panel-footer">-->
+<!--                    <div class="row">-->
+<!--                        <div class="col col-sm-6 col-xs-6">showing <b>5</b> out of <b>25</b> entries</div>-->
+<!--                        <div class="col-sm-6 col-xs-6">-->
+<!--                            <ul class="pagination hidden-xs pull-right">-->
+<!--                                <li><a href="#"><</a></li>-->
+<!--                                <li class="active"><a href="#">1</a></li>-->
+<!--                                <li><a href="#">2</a></li>-->
+<!--                                <li><a href="#">3</a></li>-->
+<!--                                <li><a href="#">4</a></li>-->
+<!--                                <li><a href="#">5</a></li>-->
+<!--                                <li><a href="#">></a></li>-->
+<!--                            </ul>-->
+<!--                            <ul class="pagination visible-xs pull-right">-->
+<!--                                <li><a href="#"><</a></li>-->
+<!--                                <li><a href="#">></a></li>-->
+<!--                            </ul>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/addContact.js"></script>
+<script src="js/deleteById.js"></script>
+<script src="js/getAllContacts.js"></script>
+<script src="js/getContactById.js"></script>
+<script src="js/update.js"></script>
+
+</body>
+</html>
